@@ -2,7 +2,7 @@ import pyautogui
 import time
 import pandas 
 
-pyautogui.PAUSE = 0.3
+pyautogui.PAUSE = 0.5
 
 # Access the company website: https://dlp.hashtagtreinamentos.com/python/intensivao/login
 
@@ -16,3 +16,4 @@ pyautogui.press("return")
 #typing in website
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("return")
+
