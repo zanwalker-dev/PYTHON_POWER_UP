@@ -2,6 +2,10 @@ import pyautogui
 import time
 import pandas 
 
+#import product base
+tabela = pandas.read_csv("produtos.csv")
+print(tabela)
+
 pyautogui.PAUSE = 0.5
 
 # Access the company website: https://dlp.hashtagtreinamentos.com/python/intensivao/login
@@ -25,3 +29,7 @@ pyautogui.press("tab")
 pyautogui.write("examplesenha")
 pyautogui.press("tab")
 pyautogui.press("return")
+time.sleep(2)
+
+
+
