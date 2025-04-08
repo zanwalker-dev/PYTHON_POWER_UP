@@ -59,10 +59,11 @@ for line in table.index:
     pyautogui.write(str(custo))
     pyautogui.press("tab")
 
-    obs = table.loc[line, "obs"]
-    pyautogui.write(str(obs))
-    pyautogui.press("tab")
+    obs = str(table.loc[line, "obs"])
+    if obs != "nan" :
+        pyautogui.write(obs)
 
+    pyautogui.press("tab")
     pyautogui.press("return")
 
     pyautogui.scroll(10000)
