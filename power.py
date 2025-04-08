@@ -4,7 +4,6 @@ import pandas
 
 #import product base
 tabela = pandas.read_csv("produtos.csv")
-print(tabela)
 
 pyautogui.PAUSE = 0.5
 
@@ -29,7 +28,31 @@ pyautogui.press("tab")
 pyautogui.write("examplesenha")
 pyautogui.press("tab")
 pyautogui.press("return")
-time.sleep(2)
+time.sleep(1)
+
+# Filling in the fields
+
+pyautogui.click(x=573, y=285)
+
+pyautogui.write("MOLO000251")
+pyautogui.press("tab")
+
+pyautogui.write("Logitech")
+pyautogui.press("tab")
+
+pyautogui.write("Mouse")
+pyautogui.press("tab")
+
+pyautogui.write("1")
+pyautogui.press("tab")
+
+pyautogui.write("25.95")
+pyautogui.press("tab")
+
+pyautogui.write("6.50")
+pyautogui.press("tab")
+
+pyautogui.press("return")
 
 
 
