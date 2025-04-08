@@ -65,5 +65,7 @@ for line in table.index:
 
     pyautogui.press("return")
 
+    pyautogui.scroll(10000)
+
 
 
