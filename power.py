@@ -3,7 +3,7 @@ import time
 import pandas 
 
 #import product base
-tabela = pandas.read_csv("produtos.csv")
+table = pandas.read_csv("produtos.csv")
 
 pyautogui.PAUSE = 0.5
 
@@ -32,27 +32,38 @@ time.sleep(1)
 
 # Filling in the fields
 
-pyautogui.click(x=573, y=285)
+for line in table.index:
+    pyautogui.click(x=573, y=285)
 
-pyautogui.write("MOLO000251")
-pyautogui.press("tab")
+    codigo = table.loc[line, "codigo"]
+    pyautogui.write(str(codigo))
+    pyautogui.press("tab")
 
-pyautogui.write("Logitech")
-pyautogui.press("tab")
+    marca = table.loc[line, "marca"]
+    pyautogui.write(str(marca))
+    pyautogui.press("tab")
 
-pyautogui.write("Mouse")
-pyautogui.press("tab")
+    tipo = table.loc[line, "tipo"]
+    pyautogui.write(str(tipo))
+    pyautogui.press("tab")
 
-pyautogui.write("1")
-pyautogui.press("tab")
+    categoria = table.loc[line, "categoria"]
+    pyautogui.write(str(categoria))
+    pyautogui.press("tab")
 
-pyautogui.write("25.95")
-pyautogui.press("tab")
+    preco_unitario = table.loc[line, "preco_unitario"]
+    pyautogui.write(str(preco_unitario))
+    pyautogui.press("tab")
 
-pyautogui.write("6.50")
-pyautogui.press("tab")
+    custo = table.loc[line, "custo"]
+    pyautogui.write(str(custo))
+    pyautogui.press("tab")
 
-pyautogui.press("return")
+    obs = table.loc[line, "obs"]
+    pyautogui.write(str(obs))
+    pyautogui.press("tab")
+
+    pyautogui.press("return")
 
 
 
