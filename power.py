@@ -16,4 +16,12 @@ pyautogui.press("return")
 #typing in website
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("return")
+time.sleep(1)
 
+#Login
+pyautogui.click(x=460, y=397)
+pyautogui.write("andre.rocha2302@gmail.com")
+pyautogui.press("tab")
+pyautogui.write("examplesenha")
+pyautogui.press("tab")
+pyautogui.press("return")
